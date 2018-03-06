@@ -2,7 +2,6 @@
 <head>
 <title> Student Electronic Exit Ticket  </title>
 <link rel="stylesheet" href="main.css"/>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,16 +13,16 @@
 <body>
 <div class="container">
     <div class="row">
-        <h2 class="text-center"> Student Electronic Exit Ticket <h2>
+        <h2 class="text-center"> Student Electronic Exit Ticket </h2>
 
 
         <button type="button" class="btn btn-primary pull-right " id="btn1" data-toggle="modal" data-target="#login-modal"> Teacher  </button>
         <button type="button" class="btn btn-primary pull-right" id="btn2" data-toggle="modal" data-target="#login-modal"> Researcher  </button>
-        <div class="modal" role="dialog" id="login-modal">
+        <div  class="modal" role="dialog" id="login-modal">
               <div class="modal-dialog">
                   <div class="modal-content">
                       <div class="modal-header">
-                        <h2>Login Form  </h2>
+                        <h2>Sign In Form  </h2>
                           <button type="button" class="close" data-dismiss="modal">  &times;  </button>
 
 
@@ -32,18 +31,28 @@
                       <div class="modal-body">
                         <form>
                         <div class="form-group">
-                          <input type="text" class="form-control">
+                          <label> Email <abbr>*</abbr> </label>
+                          <input type="email" class="form-control">
                         </div>
                         <div class="form-group">
-                          <input type="password" class="form-control">
+                          <label > Password <abbr>*</abbr> </lable>
+                          <input type="password" class="form-control" name="password" required>
                         </div>
-                        <button type="submit" class="btn"> Submit  </button>
+                        <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label form-group" for="dropdownCheck">
+                          Remember me
+                        </label>
+                        </div>
+                        <button type="submit" class="btn btn-default"> Submit  </button>
+
                         </form>
 
                       </div>
                       <div class="modal-footer">
 
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">  Close  </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal2" data-dismiss="modal">  Sign Up </button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" >  Close  </button>
 
                       </div>
 
@@ -54,11 +63,155 @@
 
         </div>
 
+
+        <div class="modal" role="dialog" id="login-modal2">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                        <h2>Sign Up Form  </h2>
+                          <button type="button" class="close" data-dismiss="modal">  &times;  </button>
+
+
+                      </div>
+
+                      <div class="modal-body">
+                        <form>
+                        <div class="form-group">
+                          <label> First Name <abbr>*</abbr> </label>
+                          <input type="text" class="form-control" name="fName" required>
+                          <label> Last Name <abbr>*</abbr> </label>
+                          <input type="text" class="form-control" name="lName" required>
+                          <label> Email <abbr>*</abbr> </label>
+                          <input type="email" class="form-control" name="email" required>
+                          <label> Affiliation <abbr>*</abbr> </label>
+                          <input type="text" class="form-control" name="Affiliation" required>
+                          <label> Your Role <abbr>*</abbr> </label>
+                          <input type="text" class="form-control" name="role" required>
+                        </div>
+                        <div class="form-group">
+                          <label> Password <abbr>*</abbr> </lable>
+                          <input type="password" class="form-control" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-default"> Submit  </button>
+                        </form>
+
+                      </div>
+                      <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary" >  Sign Up </button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" >  Close  </button>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+
+        </div>
+
+        <div class="modal" role="dialog" id="login-modal3">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                        <h2>Sign In Form  </h2>
+                          <button type="button" class="close" data-dismiss="modal">  &times;  </button>
+
+
+                      </div>
+
+                      <div class="modal-body">
+                        <form>
+                        <div class="form-group">
+                          <label> Email <abbr>* </abbr> </label>
+                          <input type="email" class="form-control" name="emailLogin" required>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-default"> Submit  </button>
+                        </form>
+
+                      </div>
+                      <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary" data-target="#login-modal4" data-toggle="modal" data-dismiss="modal">  Sign Up </button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" >  Close  </button>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+
+        </div>
+
+        <div class="modal" role="dialog" id="login-modal4">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                        <h2>Sign Up Form  </h2>
+                          <button type="button" class="close" data-dismiss="modal">  &times;  </button>
+
+
+                      </div>
+
+                      <div class="modal-body">
+                        <form>
+                        <div class="form-group">
+                          <label>  First Name <abbr> * </abbr> </label>
+                          <input type="text" class="form-control" name="SfName" required>
+                          <label> Last Name  <abbr> * </abbr> </label>
+                          <input type="text" class="form-control" name="SlName" required>
+                          <label> Email <abbr> * </abbr>  </label>
+                          <input type="email" class="form-control" name="SemailLogin" required>
+                          <label> School Name <abbr> * </abbr> </label>
+                          <input type="text" class="form-control" name="schoolName" required>
+                          <label> Race <abbr> * </abbr> </label>
+                          <input type="text" class="form-control" name="Race" required>
+                          <label> Home Language <abbr> * </abbr> </label>
+                          <input type="text" class="form-control" name="homeLanguage" required>
+                          <label> Class <abbr> * </abbr> </label>
+                          <input type="text" class="form-control" name="Sclass" required>
+
+
+                        </div>
+                        <div class="dropdown">
+                          <button  class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Gender
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a  data-value="action">Male</a></li>
+                            <li><a data-value="another action">Female</a></li>
+                            <li><a data-value="another action">Not Relevant</a></li>
+
+
+                          </ul>
+                        </div>
+
+
+                        </form>
+                        <button type="submit" class="btn btn-default"> Submit  </button>
+
+                      </div>
+                      <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" >  Close  </button>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+
+        </div>
     </div>
 
     <div class="row" id="div2">
       <div class="col-md-7">
-      <button type="button" class="btn btn-success btn-lg pull-right">For Student</button>
+      <button type="button" class="btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#login-modal3">For Student</button>
       </div>
       <div class="col-md-5">
       </div>
@@ -68,6 +221,9 @@
 
 </div>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="interactive.js"></script>
 </body>
 
 
