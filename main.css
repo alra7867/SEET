@@ -11,8 +11,18 @@ h2{
   color: #ffffff;
 }
 
+#mainHeading{
+
+  color: #ffffff;
+}
+
 
 #div2{
 
   padding-top: 80px;
+}
+
+#btnSubmit{
+
+  padding-top: 20px;
 }

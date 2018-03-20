@@ -13,11 +13,11 @@
 <body>
 <div class="container">
     <div class="row">
-        <h2 class="text-center"> Student Electronic Exit Ticket </h2>
+        <h2 class="text-center" id="mainHeading"> Student Electronic Exit Ticket </h2>
 
 
-        <button type="button" class="btn btn-primary pull-right " id="btn1" data-toggle="modal" data-target="#login-modal"> Teacher  </button>
-        <button type="button" class="btn btn-primary pull-right" id="btn2" data-toggle="modal" data-target="#login-modal"> Researcher  </button>
+  <!--      <button type="button" class="btn btn-primary pull-right " id="btn1" data-toggle="modal" data-target="#login-modal"> Teacher  </button>m-->
+        <button type="button" class="btn btn-primary pull-right" id="btn2" data-toggle="modal" data-target="#login-modal"> User (Reseacher & Teacher)  </button>
         <div  class="modal" role="dialog" id="login-modal">
               <div class="modal-dialog">
                 <form action='login.php' method='post' >
@@ -39,17 +39,39 @@
                           <label > Password <abbr>*</abbr> </lable>
                           <input type="password" class="form-control" name="password" required>
                         </div>
+                        <div class="dropdown">
+                          <button  class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Your Role
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a  data-value="action">Teacher</a></li>
+                            <li><a data-value="another action">Reseacher</a></li>
+
+
+
+                          </ul>
+                        </div>
+                      </form>
+                        <!--
                         <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="dropdownCheck">
                         <label class="form-check-label form-group" for="dropdownCheck">
                           Remember me
                         </label>
-                        </div>
-                        <button type="submit" class="btn btn-default"> Submit  </button>
+                      </div>  -->
 
-                        </form>
+
+
 
                       </div>
+                      <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                        <button type="submit" class="btn btn-default"> Submit  </button>
+                        </div>
+                      </form>
+                     </div>
                       <div class="modal-footer">
 
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal2" data-dismiss="modal">  Sign Up </button>
@@ -87,9 +109,24 @@
                           <input type="email" class="form-control" name="email" required>
                           <label> Affiliation <abbr>*</abbr> </label>
                           <input type="text" class="form-control" name="Affiliation" required>
-                          <label> Your Role <abbr>*</abbr> </label>
-                          <input type="text" class="form-control" name="role" required>
+                          <br>
+                          <div class="dropdown">
+                            <button  class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              Your Role
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                              <li><a  data-value="action">Teacher</a></li>
+                              <li><a data-value="another action">Reseacher</a></li>
+
+
+
+                            </ul>
+                          </div>
+
                         </div>
+
+
                         <div class="form-group">
                           <label> Password <abbr>*</abbr> </lable>
                           <input type="password" class="form-control" name="password" required>
